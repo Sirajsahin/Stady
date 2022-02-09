@@ -1,0 +1,329 @@
+  let sum=0;
+function addNumber(num){
+    for(let i=0;i<=num;i++){
+        sum=sum+i;
+         if(i%2==0)
+          console.log(i+" is even number")
+       else console.log(i+" is odd number")
+    }
+    return console.log(sum);
+}
+
+
+function table(num){
+  console.log("table of "+num) 
+   for(let i=0;i<10;i++)
+    {
+        console.log(num*(i+1))
+    }
+}
+undefined
+table(2)
+
+
+arr=[1,2,3,"a",false]
+(5) [1, 2, 3, 'a', false]
+for(let i=0;i<=arr.length;i++)
+{
+    console.log(typeof arr[i])
+}
+
+
+https://github.com/speedcuber911/newton-1/blob/master/index.js
+
+
+let arr=[];
+for(let i=0;i<=10;i++){
+    arr.push(i+1);
+}
+11
+arr["length"]
+11
+console.log(arr)
+VM472:1 (11) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+undefined
+
+
+let arr=[1,2,3,4,5,6,7,8,9,10]
+let sum=0;  
+for(let i=0;i<=arr.length;i++){
+    sum+=i;
+}
+55
+console.log(sum)
+VM779:1 55
+
+
+
+
+let arr=[1,2,3,4,5,6,7,8,9,10];
+ for(let i=0;i<arr.length;i++){
+     if(arr[i]%2==0)
+         console.log(arr[i]+" is the even element oft thus arry ")
+   else
+ console.log(arr[i]+" is the odd element of this arry")
+}
+VM1982:6 1 is the odd element of this arry
+VM1982:4 2 is the even element oft thus arry 
+VM1982:6 3 is the odd element of this arry
+VM1982:4 4 is the even element oft thus arry 
+VM1982:6 5 is the odd element of this arry
+VM1982:4 6 is the even element oft thus arry 
+VM1982:6 7 is the odd element of this arry
+VM1982:4 8 is the even element oft thus arry 
+VM1982:6 9 is the odd element of this arry
+VM1982:4 10 is the even element oft thus arry 
+
+
+
+
+let arr=[1,2,3,4,5,6,7,8,9,10];
+ for(let i=0;i<arr.length;i++){
+     (arr[i]%2==0)?console.log(arr[i]+" is even"):console.log(arr[i]+" is odd")
+   
+}
+VM2262:3 1 is odd
+VM2262:3 2 is even
+VM2262:3 3 is odd
+VM2262:3 4 is even
+VM2262:3 5 is odd
+VM2262:3 6 is even
+VM2262:3 7 is odd
+VM2262:3 8 is even
+VM2262:3 9 is odd
+VM2262:3 10 is even
+
+
+
+let arr=[1,2,3,4,5,6,7,8,9]
+ for(let i=0;i<6;i++){
+     arr.pop();
+ }
+4
+arr
+(3) [1, 2, 3]
+
+
+let arr=[1,2,3,4,5,6,7,8,9]
+ for(let i=0;i<3;i++){
+     arr.shift();
+ }
+
+console.log(arr)
+VM3076:6 (6) [4, 5, 6, 7, 8, 9]
+
+let arr=[1,2,3,4,5,6,7,8,9]
+ for(let i=0;i<3;i++){
+     arr.unshift(8);
+ }
+
+console.log(arr)
+VM3098:6 (12) [8, 8, 8, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+undefined
+
+
+let arr=[1,2,3,4,5,6,7,8,9]
+ for(let i=0;i<3;i++){
+     arr.push(8);
+ }
+
+console.log(arr)
+VM3144:6 (12) [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 8, 8]
+
+
+let arr=[1,2,3,4,5,6,7,8,9]
+for(let i=0;i<3;i++)
+{ arr.shift()
+  arr.pop()
+}
+console.log(arr)
+VM339:6 
+(3) [4, 5, 6]
+0: 4
+1: 5
+2: 6
+length: 3
+
+
+
+
+
+let arr=["musta","bb","london",1,2,3,4]
+     let str='';
+for(let i=0;i<arr.length;i++){
+    str+=arr[i];
+}
+'mustabblondon1234'
+
+
+
+let arr=[1,2,3,4,5,6,7,8]
+
+function findNum(num){ 
+
+for(let i=0;i<arr.length;i++){
+   if(arr[i]===num){
+     console.log("the number is exist in the arry")
+    }
+
+}
+ 
+}
+undefined
+findNum(8)
+VM1663:6 the number is exist in the arry
+
+
+
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+ss=arr.slice(2,8)
+console.log(ss)
+console.log(arr)
+VM2251:3 (6) [3, 4, 5, 6, 7, 8]
+VM2251:4 (11) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+ss=arr.slice(0,3)
+console.log(ss)
+VM1925:3 (3) [1, 2, 3]
+undefined
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+ss=arr.slice(0,8)
+console.log(ss)
+VM1939:3 (8) [1, 2, 3, 4, 5, 6, 7, 8]
+undefined
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+ss=arr.slice(2,8)
+console.log(ss)
+VM1960:3 (6) [3, 4, 5, 6, 7, 8]
+
+
+
+
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+spl=arr.splice(0,1)
+[1]
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+spl=arr.splice(0,1)
+console.log(spl)
+VM2135:3 [1]
+undefined
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+spl=arr.splice(0,1)
+console.log(spl)
+console.log(arr)
+
+
+VM2174:3 [1]
+VM2174:4 (10) [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+undefined
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+spl=arr.splice(2,3)
+console.log(spl)
+console.log(arr)
+
+
+VM2190:3 (3) [3, 4, 5]
+VM2190:4 (8) [1, 2, 6, 7, 8, 9, 10, 11]
+undefined
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+spl=arr.splice(2,0)
+console.log(spl)
+console.log(arr)
+
+
+VM2199:3 []
+VM2199:4 (11) [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+undefined
+let arr=[1,2,3,4,5,6,7,8,9,10,11]
+spl=arr.splice(2,1)
+console.log(spl)
+console.log(arr)
+
+
+VM2211:3 [3]
+VM2211:4 (10) [1, 2, 4, 5, 6, 7, 8, 9, 10, 11]
+
+
+
+function tableOf(number,till){
+ console.log("the table of"+number+ "till"+till)
+        for(let i=0;i<till;i++){
+            console.log(number*(i+1))
+        }
+}
+undefined
+tableOf(6,15)
+VM2922:2 the table of6till15
+VM2922:4 6
+VM2922:4 12
+VM2922:4 18
+VM2922:4 24
+VM2922:4 30
+VM2922:4 36
+VM2922:4 42
+VM2922:4 48
+VM2922:4 54
+VM2922:4 60
+VM2922:4 66
+VM2922:4 72
+VM2922:4 78
+VM2922:4 84
+VM2922:4 90
+
+
+
+
+let a=4;
+let b="25"
+console.log(a+b);
+VM3164:3 425
+undefined
+let a=4;
+let b=true
+console.log(a+b);
+VM3178:3 5
+undefined
+let a=4;
+let b=false
+console.log(a+b);
+VM3193:3 4
+undefined
+let a="44";
+let b=77;
+console.log(a+b);
+VM3211:3 4477
+undefined
+let a="siraj";
+let b=6
+console.log(a+b);
+VM3234:3 siraj6
+undefined
+let a="7";
+let b=6
+console.log(a-b);
+VM3254:3 1
+undefined
+let a="7";
+let b="5"
+console.log(a-b);
+VM3261:3 2
+undefined
+let a=7;
+let b="5"
+console.log(a-b);
+VM3266:3 2
+undefined
+
+
+
+
+let str="sirajul mondal"
+undefined
+subs=str.substr()
+console.log(subs)
+VM3703:2 sirajul mondal
+undefined
+subs=str.substr(2,5)
+console.log(subs)
+VM3714:2 rajul

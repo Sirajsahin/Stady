@@ -1,0 +1,114 @@
+
+
+
+.parent-class{
+	 display:flex;
+	/* flex-direction:row; flex-wrap: is = flex-flow */
+	 flex-flow: row wrap;
+	 justify-content: space-between;
+	 align-items: stretch;
+	 
+}
+
+/*where  represents a flex container
+  flex-direction: row || column || row-reverse || column-reverse;
+  flex-wrap: wrap || no-wrap || wrap-reverse;
+  justify-content: flex-start || flex-end || center || space-between || space-around
+  
+  The align-items property is somewhat similar to the justify-content property.
+  align-items: flex-start || flex-end || center || stretch || baseline
+  
+  
+  What Is Flexbox?
+According to the specification, the flexbox model provides for an efficient way to layout, align, and distribute space among elements within your document, even when the viewport and the size of your elements is dynamic or unknown.
+
+If that sound too formal, I understand the feeling. In just a bit, I’ll explain what that means in plain English.
+
+Whether you write css in your dreams or you’re just getting started, you’ll feel right at home.
+
+
+  let sum=0;
+function addNumber(num){
+    for(let i=0;i<=num;i++){
+        sum=sum+i;
+         if(i%2==0)
+          console.log(i+" is even number")
+       else console.log(i+" is odd number")
+    }
+    return console.log(sum);
+}
+
+
+function table(num){
+  console.log("table of "+num) 
+   for(let i=0;i<10;i++)
+    {
+        console.log(num*(i+1))
+    }
+}
+undefined
+table(2)
+  
+*/
+
+
+.block1{
+	width:200px;
+	height:200px;
+	background-color:blue;
+	margin:50px;
+	padding:10px;
+	text-align:center;
+}
+
+ .container{
+  margin: 20px;
+ }
+
+.header h2{
+  margin-top: 20px;
+ text-align: center;
+ font-size: 40px;
+ color: blue;
+ text-transform: uppercase;
+ text-decoration: underline;
+}
+ table{
+  width: 100%;
+  height: auto;
+ }
+table th{
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 30px;
+  background-color: black;
+  font-weight: bold;
+  color:white;
+}
+table td{
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+
+}
+table th td{
+border: 1px solid black;
+border-collapse: collapse;
+}
+.left-text{
+
+  text-align: left;
+}
+.form-field {
+  align-items: center;
+  margin-left: 270px;
+  width: 50%;
+  height: auto;
+  background-color: red;
+  
+  padding: 20px;
+}
+
+
+

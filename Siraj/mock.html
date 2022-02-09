@@ -1,0 +1,1433 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  	<style>
+  		.container{margin: 100px;}
+  		.position{ display: flex; justify-content: center;  align-items: center;     position: relative; }
+        .circle1{width: 200px;
+        	    position: absolute; height: 200px; border-radius: 50%; display: flex; justify-content: center;  align-items: center; background-color: blue;   }
+        .circle2{width: 180px;  display: flex; justify-content: center;  align-items: center;   position: absolute; height: 180px; border-radius: 50%; background-color: red;  }
+        .circle3{
+        	display: flex; justify-content: center;  align-items: center;width: 160px;height: 160px; border-radius: 50%;     position: absolute; background-color: orange;  }
+  	
+   /* #demo{
+    	margin-top: 200px;
+    	
+    	font-size: 20px;
+    	color: blue;
+    	text-transform: uppercase;
+    }
+    #demo2{
+    	
+    	
+    	font-size: 20px;
+    	color: blue;
+    	text-transform: uppercase;
+    }
+    #demo3{
+    	
+    	
+    	font-size: 20px;
+    	color: blue;
+    	text-transform: uppercase;
+    } */
+  	</style>
+  </head>
+  <body>
+   <div class="container">
+
+  <!-- 	<h2 id="chaingeHeader">Chainge this line</h2>
+
+   	<div class="position">
+   		<div class="circle1" onclick="circle1()" id="clickme"></div>
+   			 <div class="circle2" id="clickme2" onclick="circle2()"></div>
+   			 	<div class="circle3" id="clickme3" onclick="circle3()"></div>
+   			 			
+   	</div>
+
+   	 <button onclick="document.getElementById('chaingeHeader').innerHTML='THI is chainge' ">the only of body</button> -->
+
+   	<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif' ">Turnon the bulbe</button> 
+
+
+   	<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+
+<button onclick="clickright()">Turnoff the bulbe</button>    	<br><br>
+   	<button onclick="fontIc()">chainge the font size of below paragraph</button>
+
+   	<button onclick="onc()">chainge the font size of below paragraph</button>
+   	<p id="demo" onmouseover="change()" onmouseout="change2()">Chainge font size</p>
+   	
+   
+<button onclick="displayDate()">The time is?</button>
+<button onclick="this.innerHTML=Date()">The time is?</button><!-- this is react own -->
+   
+<p id="demolength"></p>
+   </div> 
+
+
+
+   <script>
+  let text = "AAAAAAAAAAAAAAAAAAAAAANBBJYHHHJUIKHUIKHASUHIUAHSAUH";
+  document.getElementById("demolength").innerHTML=text.length;
+function change(){
+	let x = document.getElementById("demo");
+	x.innerHTML="this is horror ";
+	x.style.textTransform="uppercase";
+}
+function change2(){
+	 document.getElementById("demo").style.display="block";
+	
+}
+  function tocelcise(fahrenheit){
+  	return (5/6) * (fahrenheit-32)
+  }
+ 
+document.getElementById('demo').innerHTML=add(7,5);
+/*
+
+
+
+
+
+
+
+<h2>JavaScript HTML DOM</h2>
+<p>Finding HTML Elements Using <b>document.forms</b>.</p>
+
+<form id="frm1" >
+  First name: <input type="text" name="fname" value=""><br>
+  Last name: <input type="text" name="lname" value=""><br><br>
+  <button type="button" onclick="data()" >Submit</button>
+</form> 
+
+<p>These are the values of each element in the form:</p>
+
+<p id="demo"></p>
+
+<script>
+function data(){
+const x = document.forms["frm1"];
+let text = "";
+for (let i = 0; i < x.length ;i++) {
+  text += x.elements[i].value + " ";
+}
+document.getElementById("demo").innerHTML = text;
+window.alert(text);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  let object = {firstName:"Siraj",lastName:"Mondal",carColor:"red"}
+   object.carColor="blue";
+   document.getElementById("demo").innerHTML="The siraju full name = "+object.firstName+" "+object.lastName+" "+object.carColor;
+  function clickLeft(){
+  	document.getElemntById("myImage").src="https://www.w3schools.com/js/pic_bulbon.gif";
+  }  
+  function clickright(){document.getElementById("myImage").src="https://www.w3schools.com/js/pic_bulboff.gif";}
+
+
+   
+
+ 
+
+   let x, y, z;
+   	x = 6;
+    y = 7;
+    z = x + y;
+    window.alert("the result x and y is ="+z);
+  
+
+  var c=9;
+  c//it is ok
+  var=  if you re-declare a JavaScript variable declared with var, it will not lose its value.
+  let carName = "Volvo";
+  let carName;//error
+  let ,const=ou cannot re-declare a variable declared with let or const.
+
+
+let and const
+
+These two keywords provide Block Scope in JavaScript.
+Variables declared inside a { } block cannot be accessed from outside the block:
+
+
+   alert(5);// alert the window
+  window.alert("this is only use siraj");// alert the window
+  console.log(555-55)// it show the result on browser console
+ 
+ function fontIc(){
+  	window.print() // This function is print the document
+  }
+
+ function fontIc(){
+   let x=document.getElementById("demo");
+   x.style.fontSize = "50px ";
+   x.style.textTransform = "uppercase";
+   x.style.color="red";
+   x.style.backgroundColor="blue"
+   x.style.textAlign="center";
+   x.style.borderRadius="30px";
+}
+   	 function Chainge(){
+
+  document.getElementById("chaingeHeader").innerHTML="Chainge the html element by this tag"; 	 	
+   	 }
+  
+   	
+   	document.getElementById("clickme").addEventListener("click",circle1);
+   	let count=0;
+   	function circle1(){
+   		count++;
+
+   		document.getElementById('demo').innerHTML="background-color is blue and "+"number of click " +count;
+
+   	}
+   	document.getElementById("clickme2").addEventListener("click",circle2);
+   	let count1=0;
+   	function circle2(){
+   		count1++;
+   		document.getElementById('demo2').innerHTML="background-color is red" + count1;
+   	}
+   	document.getElementById("clickme3").addEventListener("click",circle3);
+   	let count2=0;
+   	function circle3(){
+   		count2++;
+   		document.getElementById('demo3').innerHTML="background-color is orange "+count2;
+   	}
+*/
+
+
+day2//
+
+Enter your Name :<input type="text" name="name" id="fname" onchange="upperCase()">
+ function upperCase(){
+  const x = document.getElementById("fname");
+  x.value=x.value.toUpperCase();
+ }
+
+//mouse
+<div id="divDec" onmouseover="overMouse()" onmouseout="mOut()" >Mouse over me</div>
+
+ function overMouse(){
+ 	let x = document.getElementById("divDec");
+    x.innerHTML="Chainge The color also";
+    x.style.backgroundColor="blue";
+    x.style.textTransform ="uppercase";
+    x.style.textAlign="center";
+
+ }
+	
+function mOut(){
+	let x = document.getElementById("divDec");
+	x.innerHTML="Mouse over me";
+	x.style.backgroundColor="green";
+}
+
+// third on
+<div id="divDec" onmousedown="overMouse()" onmouseup="mOut()" >Mouse over me</div>
+ 
+ function overMouse(){
+ 	let x = document.getElementById("divDec");
+    x.innerHTML="Chainge The color also";
+    x.style.backgroundColor="blue";
+ }
+	
+function mOut(){
+	let x = document.getElementById("divDec");
+	x.innerHTML="Mouse over me";
+	 x.style.backgroundColor="red";
+	
+}
+	
+	//addEventListener
+
+	<div id="divDec" >Click for table of 4</div>
+<p >The number of mouse over = <span id="demo"></span></p>
+<script>
+ 
+ 	 document.getElementById("divDec").addEventListener("click",myFunction);
+  let x=0;
+ 	 function myFunction(){
+ 	 	for (let i = 0;i<=10 ;i++){
+ 	 	 document.getElementById("demo").innerHTML="Table of 4"+(4*(i+1));	
+ 	 	}
+ 	 	
+ 	 }
+
+
+// addEventListener is 
+
+
+<div id="divDec" >Mouse over me</div>
+<p>The number of mouse over = <span id="demo"></span></p>
+ 
+ 	 document.getElementById("divDec").addEventListener("mouseover",myFunction);
+    let x=0;
+ 	 function myFunction(){
+ 	 	x++
+ 	 	document.getElementById("demo").innerHTML=x;
+ 	 }
+
+
+
+//addEventListener with function
+
+<button  type="button" id="myBtn" >Mouse over me</button>
+<p >The number of mouse over = <span id="demo"></span></p>
+<script>
+ 
+ 	document.getElementById("myBtn").addEventListener("click", function() {
+  alert("Hello World!");
+});
+
+// double addEventListener
+
+<button  type="button" id="divDec" >Mouse over me</button>
+<p >The number of mouse over = <span id="demo"></span></p>
+ 
+ 	let x = document.getElementById("divDec");
+ 	x.addEventListener("click", myFirst);
+    x.addEventListener("click", mySecond); 
+
+   function myFirst(){
+   	x.style.backgroundColor="blue";
+    alert("click ok then click button");
+  	
+   }
+
+function mySecond(){
+    alert("yes you complete the task");
+  	
+   }
+
+
+
+// three function
+
+<button  type="button" id="divDec" >Mouse over me</button>
+<p  id="demo"></p>
+<script>
+ 
+ 	let x = document.getElementById("divDec");
+ 	x.addEventListener("mouseover", myFirst);
+    x.addEventListener("click", mySecond); 
+    x.addEventListener("mouseout", myThird); 
+
+   function myFirst(){
+   	document.getElementById("demo").innerHTML +="Mouseover?<br>";
+  	
+   }
+
+function mySecond(){
+    document.getElementById("demo").innerHTML +="Clicked <br>";
+  	
+   }
+
+function myThird(){
+    document.getElementById("demo").innerHTML +="Mouseout!<br>";
+  	
+   }
+
+
+
+ 	let x = document.getElementById("divDec");
+ 	x.addEventListener("mouseover", myFirst);
+    x.addEventListener("click", mySecond); 
+    x.addEventListener("mouseout", myThird); 
+
+   function myFirst(){
+   	 for(let i=1;i<=10;i++){
+   	document.getElementById("demo").innerHTML +="table of 4*"+i+" = "+i*4+"<br>"; 	
+   	 }
+
+   	
+  	
+   }
+
+function mySecond(){
+    document.getElementById("demo").innerHTML +="Clicked <br>";
+  	
+   }
+
+function myThird(){
+    document.getElementById("demo").innerHTML +="Mouseout!<br>";
+  	
+   }
+
+// mouse count
+   	let x = document.getElementById("divDec");
+ 	x.addEventListener("mouseover", myFirst);
+    x.addEventListener("click", mySecond); 
+    let count=0;
+   function myFirst(){
+   	count++;
+   	document.getElementById("demo").innerHTML=count;
+  	
+   }
+
+function mySecond(){
+    alert("yes you complete the task");
+  	
+   }
+
+
+
+// multiplication of 5 7 
+
+
+<button  type="button" id="divDec" >Mouse over me</button>
+<p id="demo"></p>
+<script>
+   let p1=5;
+   let p2=7;
+ 	let x = document.getElementById("divDec");
+    x.addEventListener("click", mySecond); 
+    
+function mySecond(){
+  mySecondf(p1,p2);
+}
+function mySecondf(a,b){
+    document.getElementById("demo").innerHTML=p1*p2;
+  	
+   
+   }
+
+
+// same value copy
+<h2 id="header">The orange part</h2>
+ 	<p id="para"></p>
+   
+ document.getElementById("para").innerHTML=document.getElementById("header").firstChild.nodeValue;;
+
+ 
+
+
+
+//append child
+
+<div id="head">
+   	<p id="para1">This is a paragraph</p>
+   	<p id="para2">This is also a paragraph</p>
+ 
+ 	
+	const element = document.getElementById("head");
+	const para = document.createElement("p");
+	const node = document.createTextNode("This is a append paragraph");
+	para.appendChild(node);
+	element.appendChild(para);
+// append child insertBefore
+
+<div id="head">
+   	<p id="para1">This is a paragraph</p>
+   	<p id="para2">This is also a paragraph</p>
+  
+	const para = document.createElement("p");
+	const node = document.createTextNode("This is a append paragraph");
+	para.appendChild(node);
+    
+    const element = document.getElementById("head");
+	const child = document.getElementById("para2");
+	element.insertBefore(para,child);
+
+
+// remove a para
+ <div id="head">
+   	<p id="para1">This is a paragraph</p>
+   	<p id="para2">This is also a paragraph</p>
+   </div>
+ 	
+ <button  type="button" onclick="rem()">Delete a para</button>
+
+function rem() {
+	let elem = document.getElementById("para2");
+	elem.remove();
+}   
+
+// some time browser doesnot support
+<div id="head">
+   	<p id="para1">This is a paragraph</p>
+   	<p id="para2">This is also a paragraph</p>
+   </div>
+ 	
+ <button  type="button" onclick="rem()">Delete a para</button>
+
+function rem() {
+	let parent = document.getElementById("head");
+	let child = document.getElementById("para2");
+	parent.removeChild(child);
+}   
+// replace
+
+   <div id="head">
+   	<p id="para1">This is a paragraph</p>
+   	<p id="para2">This is also a paragraph</p>
+   </div>
+ 	
+ <button  type="button" onclick="rem()">Delete a para</button>
+
+function rem() {
+	
+  const para = document.createElement("p");
+  const node = document.createTextNode("this is");
+   para.appendChild(node);
+	let parent = document.getElementById("head");
+	let child = document.getElementById("para2");
+	parent.replaceChild(para,child);
+}  	
+
+// tag collection
+
+<p id="para1">This is a paragraph</p>
+   	<p id="para2">This is also a paragraph</p>
+   	<p id="para3">All make color</p>
+ 
+ <button  type="button" onclick="myFunction()">Chainge all para tag</button>
+function myFunction() {
+	
+	const allPara = document.getElementsByTagName("p");
+	// also use  const allPara = document.querySelectorAll("p");
+
+     for(let i=0;i<allPara.length;i++){
+     	allPara[i].style.color="red";
+     	allPara[0].style.fontSize="25px";
+     	allPara[1].style.fontSize="20px";
+
+   
+     }
+  
+}  
+
+// count the number of paragraph
+	<p id="para1">This is a paragraph</p>
+   	<p id="para2">This is also a paragraph</p>
+   	<p id="para3">All make color</p>
+    	
+ <button  type="button" onclick="myFunction()">Chainge all para tag</button>
+
+<p id="demo"></p>
+
+function myFunction() {
+	const allPara = document.querySelectorAll("p");
+   document.getElementById("demo").innerHTML="Number of paragraph in this abose section is "+allPara.length; 
+} 
+
+//function
+
+  	<p id="para1">Start Function</p>
+   	
+   <p id="demo"></p>
+
+  var x = myFunction(5,7);
+
+ document.getElementById("demo").innerHTML = x;  
+
+function myFunction(a,b) {
+ 
+   return a*b;    
+  
+}
+
+//function constratction Function key
+const myFunction = new Function("a", "b", "return a * b");
+let x = myFunction(4, 3);
+//Arry function
+// Arrow functions do not have their own this. They are not well suited for defining object methods.
+
+// Arrow functions are not hoisted. They must be defined before they are used.
+
+// Using const is safer than using var, because a function expression is always constant value.
+
+// You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:
+   	<p id="para1">Start Function</p>
+   	
+   <p id="demo"></p>
+ const x = (x,y) => x*y;
+document.getElementById("demo").innerHTML = x(5,6); 
+
+// If a function is called with missing arguments (less than declared), the missing values are set to undefined.
+
+// if y is undefined
+<p id="demo"></p>
+
+<script>
+	function Fun(x,y){
+      if (y=== undefined) {
+      	y=2;
+      }
+      return x*y;
+	}
+ 
+document.getElementById("demo").innerHTML = Fun(5);  
+
+ //summ of all 
+ 	<p id="para1">findmaximum [10,20,30,40,50,60,70,100,90] </p>
+   	
+   <p id="demo"></p>
+	
+	let sum= 0;
+	function sumAll(){
+      for(let i=0; i<arguments.length; i++){
+        sum+=arguments[i];
+      }
+      return sum;
+	}
+document.getElementById("demo").innerHTML ="Total sum is "+ sumAll(10,20,30,40,50,60,70,100,90);    
+
+// maximum number of some argument
+ <p id="para1">findmaximum [10,20,30,40,50,60,70,100,90] </p>
+   	
+   <p id="demo"></p>
+
+	let max= -Infinity;
+	function findMax(){
+      for(let i=0; i<arguments.length; i++){
+      if (arguments[i]>max) {
+      	max=arguments[i];
+      }
+      }
+      return max;
+	}
+document.getElementById("demo").innerHTML ="maximum number is "+findMax(10,20,30,40,50,60,70,100,90); 
+   
+
+// function call() method
+The JavaScript call() Method
+The call() method is a predefined JavaScript method.
+It can be used to invoke (call) a method with an owner object as an argument (parameter).
+With call(), an object can use a method belonging to another object.
+This example calls the fullName method of person, using it on person1:
+
+const person ={
+    	fullname: function(){
+           return this.firstName+" "+this.lastName;
+    	}
+    }
+   const personSuroj ={
+   	 firstName:"Suroj",
+   	 lastName:"mondal"
+   }
+   const personSiraj ={
+   	firstName:"sirajul",
+   	lastName:"mondal"
+   }
+   const name = person.fullname.call(personSiraj);
+ document.getElementById("demo").innerHTML =name;// sirajul mondal
+
+ // call() method with argument
+
+ const person ={
+    	fullname: function(years,country){
+           return this.firstName+" "+this.lastName+" the age "+years+" old and he lived in "+ country;
+    	}
+    }
+   const personSuroj ={
+   	 firstName:"Suroj",
+   	 lastName:"mondal"
+   }
+   const personSiraj ={
+   	firstName:"sirajul",
+   	lastName:"mondal"
+   }
+   const name = person.fullname.call(personSiraj,23,"India");
+ document.getElementById("demo").innerHTML =name;//
+
+//The Difference Between call() and apply()
+The difference is:
+The call() method takes arguments separately.
+The apply() method takes arguments as an array.
+both are similar
+
+const name = person.fullname.call(personSiraj,[23,"India"]);//argument as an array
+document.getElementById("demo").innerHTML =name;//
+
+@@
+You can find the largest number (in a list of numbers) using the Math.max(1,2,3)//3
+ method:
+Since JavaScript arrays do not have a max() method, you can apply the Math.max() method instead
+
+Math.max.apply(null, [1,2,3]); // Will also return 3 here use apply() bcz array has no any max() method
+
+
+@@@JavaScript Strict Mode
+ Math.max.apply(0, [1,2,3]); 
+ In JavaScript strict mode, if the first argument (0) of the apply() method is not an object, it becomes the owner (object) of the invoked function. In "non-strict" mode, it becomes the global object.
+
+
+
+@@
+With the bind() method, an object can borrow a method from another object.
+The example below creates 2 objects (person and member).
+The member object borrows the fullname method from the person object:
+
+const person ={
+     firstName:"Suroj",
+   	 lastName:"mondal",
+    	fullname: function(){
+           return this.firstName+" "+this.lastName;
+    	}
+    }
+   const personSuroj ={
+   	 firstName:"Suroj",
+   	 lastName:"mondal"
+   }
+   const personSiraj ={
+   	firstName:"sirajul",
+   	lastName:"mondal"
+   }
+   const fullname = person.fullname.bind(personSiraj);
+ document.getElementById("demo").innerHTML =fullname()//sirajul mondal
+ // delete the person Object
+
+ @@
+  const person ={
+     firstName:"Suroj",
+   	 lastName:"mondal",
+    	fullname: function(){
+           let x=document.getElementById("demo");
+            x.innerHTML=this.firstName+" "+this.lastName;
+    	}
+    }
+   const personSuroj ={
+   	 firstName:"Suroj",
+   	 lastName:"mondal"
+   }
+   const personSiraj ={
+   	firstName:"sirajul",
+   	lastName:"mondal"
+   }
+   const dis = person.fullname.bind(person);
+   setTimeout(dis,6000);//result show after 6 second
+
+//
+
+@@@JavaScript Closures
+JavaScript variables can belong to the local or global scope.
+Global variables can be made local (private) with closures.
+Global Variables
+A function can access all variables defined inside the function, like this:
+
+Example
+function myFunction() {
+  let a = 4;
+  return a * a;
+}
+But a function can also access variables defined outside the function, like this:
+
+Example
+let a = 4;
+function myFunction() {
+  return a * a;
+}
+In the last example, a is a global variable.
+In a web page, global variables belong to the window object.
+Global variables can be used (and changed) by all scripts in the page (and in the window).
+1.> In the first example, a is a local variable.
+
+2.> A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.
+
+3.> Global and local variables with the same name are different variables. Modifying one, does not modify the other.
+
+4.> Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+
+Example
+function myFunction() {
+  a = 4;//without declaration it is a global veriable we can use any whare in our code
+}
+
+@@ counter
+// Initiate counter
+let counter = 0;
+
+// Function to increment counter
+function add() {
+  counter += 1;
+}
+
+// Call add() 3 times
+add();
+add();
+add();
+
+// The counter should now be 3 but here is a problem is any code can change the counter
+
+
+// Initiate counter
+let counter = 0;
+
+// Function to increment counter
+function add() {
+  let counter = 0;// it is local value when function is end the value will be same as initial value // if we use return then it take the localy change value
+  counter += 1;
+}
+
+// Call add() 3 times
+add();
+add();
+add();
+window.write(counter);//0
+//The counter should now be 3. But it is 0, It did not work because we display the global counter instead of the local counter.
+@@
+
+// Function to increment counter
+function add() {
+  let counter = 0;
+  counter += 1;
+  return counter;
+}
+
+// Call add() 3 times
+add();
+add();
+add();
+// It did not work because we reset the local counter every time we call the function.
+//The counter should now be 3. But it is 1.
+
+
+@@sovle the above with closures
+
+JavaScript Closures
+Remember self-invoking functions? What does this function do?
+
+const add = (function () {
+  let counter = 0;//it like a global variable;
+  return function () {counter += 1; return counter;}
+})();
+
+  document.getElementById("demo").innerHTML = add();
+
+
+// class
+<p id="demo"></p>
+
+	 class car{
+          constructor(name,year){
+          	this.name = name;
+          	this.year = year;
+          }
+
+	 }
+  const myCar = new car("ford","2021");
+  document.getElementById("demo").innerHTML=myCar.name + " "+myCar.year;
+
+// age calculation using  method
+ class car{
+          constructor(name,year){
+          	this.name = name;
+          	this.year = year;
+          }
+         age(){
+         	let date = new Date();
+         	return date.getFullYear() - this.year;
+         }
+	 }
+
+	 class method extends car{
+	 	constructor(brand,model){
+	 		this.brand=brand;
+	 		this.model=model;
+	 	}
+	 }
+  const myCar = new car("ford",2021);
+  document.getElementById("demo").innerHTML="my car is "+ myCar.age() + " year old";
+
+// Class Methods
+// Class methods are created with the same syntax as object methods.
+
+// Use the keyword class to create a class.
+
+// Always add a constructor() method.
+
+// Then add any number of methods
+
+/// inheritance
+ class car{
+          constructor(name){
+          	this.name = name;
+          	
+          }
+         age(){
+         	let date = new Date();
+         	return date.getFullYear() - this.year;
+         }
+         present(){
+         	return 'this car is '+ this.name;
+         }
+	 }
+
+   class Driver extends car{
+   	constructor(name,model){
+       super(name);
+       this.model = model;
+   	}
+   	show(){
+   			return this.present() +" its model is "+this.model;
+   	}
+
+   }
+
+  let myCar = new Driver("Ford","HH25");
+  document.getElementById("demo").innerHTML=myCar.show();
+
+// The super() method refers to the parent class.
+
+// By calling the super() method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods.
+   
+Getters and Setters
+// Classes also allows you to use getters and setters.
+//  It can be smart to use getters and setters for your properties, especially if you want to do something special with the value before returning them, or before you set them.To add getters and setters in the class, use the get and set keywords.
+
+// we can change the value through setter
+ class Car{
+          constructor(name){
+          	this.name = name;
+          	
+          }
+        get carName(){
+         	 return ' car name is '+this.name;
+         }
+         set carName(x){
+         	 this.name = x;
+         }
+	 }
+  let myCar = new Car("Ford");
+  myCar.name = "Tesla";
+  document.getElementById("demo").innerHTML=myCar.carName ;
+//Static class methods are defined on the class itself.
+// You cannot call a static method on an object, only on an object class.
+   
+class Car{
+          constructor(name){
+          	this.name = name;
+          	
+          }
+        static hello(x){
+         	 return " car name is "+ x.name;
+         }
+         
+	 }
+  let myCar = new Car("Ford");
+  document.getElementById("demo").innerHTML= Car.name1(hello) ;
+  
+<!-- // object    -->
+
+  <!-- In JavaScript, almost "everything" is an object.
+
+Booleans can be objects (if defined with the new keyword)
+Numbers can be objects (if defined with the new keyword)
+Strings can be objects (if defined with the new keyword)
+Dates are always objects
+Maths are always objects
+Regular expressions are always objects
+Arrays are always objects
+Functions are always objects
+Objects are always objects
+All JavaScript values, except primitives, are objects.
+   -->
+JavaScript Primitives<!-- 
+A primitive value is a value that has no properties or methods.
+A primitive data type is data that has a primitive value.
+JavaScript defines 5 types of primitive data types:
+string
+number
+boolean
+null
+undefined -->
+A JavaScript object is a collection of named values
+
+// myobject this is a literal object
+const myObj = {firsName:"siraj",lastName:"mondal",age:23 ,sex:"male"};
+ document.getElementById("demo").innerHTML= myObj.firsName+" "+myObj.lastName ;
+
+//Object Methods
+<!-- Methods are actions that can be performed on objects.
+Object properties can be both primitive values, other objects, and functions.
+An object  -->method is an object property containing a function definition.
+
+//Using the JavaScript Keyword new
+The following example create a new JavaScript object using new Object(),
+
+const myObj = new Object();
+ myObj.firsName ="siraj";
+ myObj.lastName ="mondal";
+ myObj.age =23;
+ myObj.sex ="male";
+ document.getElementById("demo").innerHTML= myObj.firsName;
+
+<!--  JavaScript Objects are Mutable
+Objects are mutable: They are addressed by reference, not by value.
+If person is an object, the following statement will not create a copy of person: -->
+
+// for in loop travel every element of an object
+const myObj = {firsName:"siraj",lastName:"mondal",age:23 ,sex:"male"};
+ let text="";
+ for(let x in myObj){
+ 	text+=myObj[x]+" ";
+ }
+ document.getElementById("demo").innerHTML= text;
+
+//add an element
+const myObj = {firsName:"siraj",lastName:"mondal",age:23 ,sex:"male"};
+  myObj.natinality="indian";
+ document.getElementById("demo").innerHTML= myObj.natinality;
+//delete an element
+
+const myObj = {firsName:"siraj",lastName:"mondal",age:23 ,sex:"male"};
+  delete myObj.age;// delete myObj["age"] we can this also
+ document.getElementById("demo").innerHTML= myObj.age;//
+// nested object
+
+
+ const myObj = {
+ 	firsName:"siraj",
+    lastName:"mondal",
+    car:{
+      car1:"Ford",
+      car2:"Volvo",
+    },
+    age:23 ,
+    sex:"male", 
+   };
+  
+ document.getElementById("demo").innerHTML= myObj.car.car1// myObj.car["car1"]; we can also use
+//object this function
+
+const myObj = {
+ 	firstName:"siraj",
+    lastName:"mondal",
+    age:23 ,
+    sex:"male", 
+    fullName: function(){
+    	return (this.firstName + " " + this.lastName);
+    }
+   };
+  
+ document.getElementById("demo").innerHTML= myObj.fullName();
+
+//
+
+ const myObj = {
+ 	firstName:"siraj",
+    lastName:"mondal",
+    age:23 ,
+    sex:"male", 
+    fullName: function(){
+    	return (this.firstName + " " + this.lastName).toUpperCase();
+    }
+   };
+  
+ document.getElementById("demo").innerHTML= myObj.fullName();
+
+
+ //get in object to reduce function call
+  const myObj = {
+ 	firstName:"siraj",
+    lastName:"mondal",
+    age:23 ,
+    sex:"male", 
+    get fullName(){
+    	return this.firstName + " " + this.lastName;
+    }
+   };
+  
+ document.getElementById("demo").innerHTML= myObj.fullName;
+
+
+ //set an element
+ const myObj = {
+ 	firstName:"siraj",
+    lastName:"mondal",
+    age:23 ,
+    sex:"male", 
+    language:"",
+    set lang(x){
+    	this.language=x;
+    }
+   };
+   myObj.lang="hindi";
+  
+ document.getElementById("demo").innerHTML= myObj.language;
+ 
+//Why Using Getters and Setters?
+It gives simpler syntax
+It allows equal syntax for properties and methods
+It can secure better data quality
+It is useful for doing things behind-the-scenes
+
+//Using Object.values()
+// Any JavaScript object can be converted to an array using Object.values():
+ const myObj = {
+ 	firstName:"siraj",
+    lastName:"mondal",
+    age:23 ,
+    sex:"male", 
+   };
+  const myArry =  Object.values(myObj);
+  document.getElementById("demo").innerHTML = myArry;
+//Using JSON.stringify()
+// Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+
+const myObj = {
+ 	firstName:"siraj",
+    lastName:"mondal",
+    age:23 ,
+    sex:"male", 
+   };
+  let myString =  JSON.stringify(myObj);
+ document.getElementById("demo").innerHTML = myString;
+//arry to string
+const myArr = ["siraj","mondal",23];
+  let myString =  JSON.stringify(myArr);
+  
+ document.getElementById("demo").innerHTML = myString;
+///constructor
+
+//create a function of person object
+  function Person(first,last,age,eye) {
+   this.firstName = first;
+   this.lastName  = last;
+   this.age = age;
+   this.eyeColor = eye;
+  }
+  //create an object name person
+  const myFather = new Person("Ajkar","Mondal",45,"blue");
+  //display father age
+ document.getElementById("demo").innerHTML = "Myfather is now "+myFather.age+" years old";
+
+ ////create a function of person object
+  function Person(first,last,age,eye) {
+   this.firstName = first;
+   this.lastName  = last;
+   this.age = age;
+   this.eyeColor = eye;
+  }
+  //create an object name person ..Sometimes we need a "blueprint" for creating many objects of the same "type".using constructor function
+  const myFather = new Person("Ajkar","Mondal",45,"blue");
+  const myMother = new Person("anju","bibi",40,"blue");
+  //display father age
+ document.getElementById("demo").innerHTML = "Myfather is now "+myFather.age+" years old and myMother age is now "+myMother.age;
+
+
+
+//// Constructor function for Person objects
+function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+// You can NOT add a new property to a constructor function
+Person.nationality = "English";
+
+// Create 2 Person objects
+const myFather = new Person("John", "Doe", 50, "blue");
+const myMother = new Person("Sally", "Rally", 48, "green");
+
+// Display nationality
+document.getElementById("demo").innerHTML =
+"The nationality of my father is " + myFather.nationality; 
+output:-The nationality of my father is undefined;
+
+//Built-in JavaScript Constructors
+JavaScript has built-in constructors for native objects:
+
+new String()    // A new String object
+new Number()    // A new Number object
+new Boolean()   // A new Boolean object
+new Object()    // A new Object object
+new Array()     // A new Array object
+new RegExp()    // A new RegExp object
+new Function()  // A new Function object
+new Date()      // A new Date object
+
+//Did You Know?
+As you can see above, JavaScript has object versions of the primitive data types String, Number, and Boolean. But there is no reason to create complex objects. Primitive values are much faster:
+
+Use string literals "" instead of new String().
+Use number literals 50 instead of new Number().
+Use boolean literals true / false instead of new Boolean().
+Use object literals {} instead of new Object().
+Use array literals [] instead of new Array().
+Use pattern literals /()/ instead of new RegExp().
+Use function expressions () {} instead of new Function().
+
+//The JavaScript prototype property(method) allows you to add new properties to object constructors:
+
+//create a function of person object
+  function Person(first,last,age,eye) {
+   this.firstName = first;
+   this.lastName  = last;
+   this.age = age;
+   this.eyeColor = eye;
+  }
+  //using protype key we can create or add a new method in objects constructors function like nationality,color,etc.
+  Person.prototype.nationality="India";
+
+  const myFather = new Person("Ajkar","Mondal",45,"blue");
+ 
+  //display father age
+ document.getElementById("demo").innerHTML = "Myfather is belog to "+myFather.nationality;
+
+//
+
+//create a function of person object
+  function Person(first,last,age,eye) {
+   this.firstName = first;
+   this.lastName  = last;
+   this.age = age;
+   this.eyeColor = eye;
+  }
+  //using protype key we can create or add a new method in consrtuctor function like nationality,color,etc.
+  Person.prototype.nationality= function(){
+   return this.firstName+" "+this.lastName;
+  }
+ const myFather = new Person("Ajkar","Mondal",45,"blue");
+ //display father age
+ document.getElementById("demo").innerHTML = "Myfather full name is "+myFather.nationality();
+
+@@ Iterable objects are objects that can be iterated over with for..of.
+Technically, iterables must implement the Symbol.iterator method
+
+@@ Iterating Over a String
+You can use a for..of loop to iterate over the elements of a string:
+
+const namel = "W3SCHOOLS";
+ let textl = "";
+ for(const x of namel){
+ 	textl+= x+"<br> ";
+ }
+W
+3
+S
+C
+H
+O
+O
+L
+S
+
+const namel = "W3SCHOOLS";
+ let textl = "";
+ for(const x of namel){
+ 	textl+= x+" ";
+console.log(textl);
+ }
+ W 
+ W 3 
+ W 3 S 
+ W 3 S C 
+ W 3 S C H 
+ W 3 S C H O 
+ W 3 S C H O O 
+ W 3 S C H O O L 
+ W 3 S C H O O L S 
+
+
+const namel = "123456";
+ let textl = "";
+ for(const x of namel){
+ 	textl+= x+" ";
+console.log(textl);
+ }
+VM229:5 1 
+VM229:5 1 2 
+VM229:5 1 2 3 
+VM229:5 1 2 3 4 
+VM229:5 1 2 3 4 5 
+VM229:5 1 2 3 4 5 6 
+
+const namel = ["A","B","C"];
+ let textl = "";
+ for(const x of namel){
+ 	textl+= x+"<br> ";
+ }
+A
+B
+C
+
+// set
+A JavaScript Set is a collection of unique values.
+Each value can only occur once in a Set.
+A Set can hold any value of any data type
+
+
+//Create a set
+  const setObj = new Set(["a","b","c"]);
+  //Display Size of the set
+ document.getElementById("demo").innerHTML = setObj.size;
+
+
+
+//Create a set
+  const setObj = new Set();
+ // add values to the set
+   setObj.add("a");
+   setObj.add("b");
+   setObj.add("c");
+   setObj.add("d");
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = setObj.size;
+
+
+//Create a set
+  const setObj = new Set();
+ // add values to the set
+ 
+  const x="a";
+  const y="b";
+   setObj.add(x);
+   setObj.add(y);
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = setObj.size;
+
+
+//Create a set
+  const setObj = new Set(["a","b","c","d"]);
+   setObj.add("e");
+   setObj.add("f");
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = setObj.size;//6
+
+//Create a set
+  const setObj = new Set(["a","b","c","d"]);
+   setObj.add("e");
+   setObj.add("f");
+   setObj.add("f");
+   setObj.add("f");
+   setObj.add("f");
+   setObj.add("f");
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = setObj.size;//6
+
+
+ const setObj1 = new Set(["a","b","c","d"]);
+   setObj.delete("e");//remove e form set
+   setObj.add("f");
+ 
+ Set(5) {'a', 'b', 'c', 'd', 'f'}
+
+///featch each value of a set using foEach
+  const setObj = new Set(["a","b","c","d"]);
+    let text = "";
+    setObj.forEach (el => text += el + "<br>")// using foEach arrow function to get each element
+  //Display Size of the set
+   document.getElementById("demo").innerHTML = text;
+
+
+// map 
+A Map holds key-value pairs where the keys can be any datatype.
+A Map remembers the original insertion order of the keys.
+A Map has a property that represents the size of the map
+
+
+//Create a map with key value
+  const mapObj = new Map([["a",1],["b",2],["c",3],["d",4]]);
+    
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = mapObj.get("a");//1
+
+ @@//You can add elements to a Map with the set() method:
+
+
+//Create a map with key value
+  const mapObj = new Map();
+ //using set method
+  mapObj.set("apple",500);
+  mapObj.set("banana",600);
+  mapObj.set("oranges",800);
+    
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = mapObj.get("apple");//500
+
+ @@The set() method can also be used to change existing Map values:
+
+//Create a map with key value
+  const mapObj = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+  mapObj.set("oranges",800);
+    
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = mapObj.get("oranges");//800
+
+ @@ The get() method gets the value of a key in a Map:
+
+@@The size property returns the number of elements in a Map:
+
+
+//Create a map with key value
+  const mapObj = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+  mapObj.delete("oranges");//delete a element of map
+    
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = mapObj.get("oranges");// undefined
+
+@@clear() //clear all element of map and it used on set also
+
+ //Create a map with key value
+  const mapObj = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+ ]);
+
+  mapObj.clear();
+    
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = mapObj.size;//0
+
+@@ has()
+//Create a map with key value
+  const mapObj = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+    
+ //Display Size of the set
+ document.getElementById("demo").innerHTML = mapObj.has("apples");// true bcz it exists in 	a map (has() the functhion to cheik wheather it exists or not )
+document.getElementById("demo").innerHTML = typeof mapObj;// object
+
+
+@@ using forEach to get output with key
+
+ const mapObj1 = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+   
+   let text1 = "";
+   mapObj.forEach ((val,key) => text += key +" = "+val+" <br> ")
+  console.log(text)
+ apples = 500
+ bananas = 300
+ oranges = 200
+
+
+</script>
+</body>
+</html>

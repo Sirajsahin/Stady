@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+	body{
+		margin: 200px;
+	}
+
+	.container{
+      width: 500px;
+      height: 400px;
+      background-color: yellow;
+      position: relative;
+
+	}
+	.animation{
+		width: 60px;
+		height: 60px;
+		background-color: red;
+		position: absolute;
+	}
+	button{
+		margin-top: 20px;
+	}
+	#divDec{
+		width: 200px;
+		height: 40px;
+		background-color: red;
+		color: white;
+		font-size: 20px;
+		padding: 10px;
+
+	}
+	.divOrange{
+		background-color: coral;
+  padding: 50px;
+	}
+.white{
+	  background-color: white; 
+  font-size: 20px;
+  border: 1px solid;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+   
+   	<p id="para1">findmaximum [10,20,30,40,50,60,70,100,90] </p>
+   	
+   <p id="demo"></p>
+
+<script>
+    const person ={
+     firstName:"Suroj",
+   	 lastName:"mondal",
+    	fullname: function(){
+           let x=document.getElementById("demo");
+            x.innerHTML=this.firstName+" "+this.lastName;
+    	}
+    }
+   const personSuroj ={
+   	 firstName:"Suroj",
+   	 lastName:"mondal"
+   }
+   const personSiraj ={
+   	firstName:"sirajul",
+   	lastName:"mondal"
+   }
+   const dis = person.fullname.bind(person);
+   setTimeout(dis,6000);
+ 
+
+
+
+	
+
+
+
+	
+	
+	
+
+</script>
+</body>
+</html>

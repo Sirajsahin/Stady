@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>The Election Voting Count</title>
+	   
+<style>
+   	
+
+body{
+	background-color: aquamarine;
+}
+.container{
+	margin: 30px;
+
+}
+.head h2{
+	
+	margin-left: 30%;
+	text-transform: uppercase;
+	font-size: 40px;
+    color: darkmagenta;
+}
+.voting_count{
+display: flex;
+flex-direction: row;
+align-items: center;
+margin: 120px;
+padding-left: 30px;
+}
+
+.poll{
+	padding: 20px;
+
+}
+.submit{
+	padding: 20px 80px;
+	font-size: 35px;
+    border-color: cornsilk;
+    background-color: orange;
+    text-transform: uppercase;
+}
+.text-vote{
+	font-size: 25px;
+    color: #106d24;
+}
+.text-vote2{
+	font-size: 25px;
+    color: blue;
+}
+.text-vote3{
+	font-size: 25px;
+    color: #e70b0b;
+}
+ </style>
+
+</head>
+
+<body>
+  <div class="container">
+  	<div class="head">
+  		<h2>This Is A Survey Page</h2>
+  	</div>
+
+   <div class="voting_count">
+   	<div class="poll" >
+   		
+   		<button id='clickme' class="submit">Bjp</button>
+   	</div>
+
+   	<div class="poll" >
+   		<button class="submit" id="clickme2">Congres</button>
+   	</div>
+   	<div class="poll" >
+   		<button class="submit" id="clickme3">APP</button>
+   	</div>
+
+   </div>
+    
+   <p class="text-vote">NUMBER OF VOTE TO BJP = <span  id="bjp-vote"></span><br>
+   <p class="text-vote2">NUMBER OF VOTE TO CNG = <span  id="cong-vote"></span><br>
+   <p class="text-vote3">NUMBER OF VOTE TO APP = <span  id="app-vote"></span><br>
+    
+
+    
+  </div>
+
+   <script>
+ 	let numberOfClicks = 0;
+  function addclick() {
+  numberOfClicks++;
+  document.getElementById('bjp-vote').innerHTML = numberOfClicks;
+ }
+
+document.getElementById("clickme").addEventListener("click", addclick);
+
+
+let numberOfClicks2 = 0;
+function addclick2() {
+  numberOfClicks2++;
+  document.getElementById('cong-vote').innerHTML = numberOfClicks2;
+ }
+
+document.getElementById("clickme2").addEventListener("click", addclick2);
+
+let numberOfClicks3 = 0;
+function addclick3() {
+  numberOfClicks3++;
+  document.getElementById('app-vote').innerHTML = numberOfClicks3;
+ }
+
+document.getElementById("clickme3").addEventListener("click", addclick3);
+
+
+
+</script>
+
+
+</body>
+</html>
+
